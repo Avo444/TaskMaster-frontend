@@ -1,0 +1,26 @@
+@use "../../../global/index.scss" as *;
+.item {
+    @include flex-column(20px);
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    min-height: 240px;
+    border-radius: 30px;
+    background: $lightBackground;
+    .img {
+        margin: auto;
+    }
+    &__content {
+        @include flex-column(10px);
+        align-items: center;
+        text-align: center;
+
+        .title {
+            @include title(18px, 16px);
+        }
+        .desc {
+            @include desc(14px, 13px);
+        }
+    }
+}

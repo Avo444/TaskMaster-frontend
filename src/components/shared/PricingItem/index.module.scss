@@ -1,0 +1,59 @@
+@use "../../../global/index.scss" as *;
+.item {
+    @include flex-column(25px);
+    min-height: 500px;
+    padding: 30px 20px;
+    border-radius: 30px;
+    align-items: center;
+    border: 1px solid $primaryColor;
+    &__content {
+        @include flex-column(5px);
+        align-items: center;
+        width: 100%;
+        .icon {
+            max-width: 70px;
+            img {
+                width: 100%;
+            }
+        }
+
+        .title {
+            @include title(22px);
+        }
+
+        .desc {
+            @include desc();
+        }
+
+        .price {
+            @include title(18px);
+            padding: 20px 0;
+
+            span {
+                font-size: 24px;
+            }
+        }
+
+        .button__content {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            border-radius: 10px;
+            background-color: rgba($color: $primaryColor, $alpha: 0.05);
+            .btn {
+                @include button(10px 30px, 16px, 10px);
+                margin: auto;
+            }
+        }
+    }
+    &__options {
+        @include flex-column(10px);
+
+        .option__item {
+            @include flex-center(10px);
+            .check {
+                color: $primaryColor;
+            }
+        }
+    }
+}

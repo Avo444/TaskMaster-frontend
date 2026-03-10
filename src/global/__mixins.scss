@@ -1,0 +1,75 @@
+@use "./__variables.scss" as *;
+
+@mixin container($width: $contentWidth) {
+    max-width: $width;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+
+@mixin button($padding: 15px 25px, $font-size: 16px, $border-radius: 20px) {
+    cursor: pointer;
+    font-weight: 500;
+    padding: $padding;
+    color: $lightColor;
+    font-size: $font-size;
+    font-family: $textFont;
+    transition: $transition;
+    border-radius: $border-radius;
+    background-color: $primaryColor;
+    &:hover {
+        box-shadow: 0 0 10px rgba($color: $primaryColor, $alpha: 0.8);
+    }
+}
+
+// ================================== [ FlexBox ] ===================================
+
+@mixin flex-gap($gap: 24px) {
+    display: flex;
+    gap: $gap;
+}
+
+@mixin flex-center($gap: 30px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin flex-column($gap: 15px, $align: flex-start) {
+    display: flex;
+    row-gap: $gap;
+    align-items: $align;
+    flex-direction: column;
+}
+
+@mixin flex-space($space: space-between, $align: flex-start) {
+    display: flex;
+    justify-content: $space;
+    align-items: $align;
+}
+
+
+// ================================== [ Text ] ===================================
+@mixin title($size: 48px, $mobile: 28px) {
+    font-weight: 700;
+    font-size: $size;
+    color: $titleColor;
+    font-family: $titleFont;
+
+
+    @media screen and (max-width: 425px) {
+        font-size: $mobile;
+    }
+}
+
+@mixin desc($size: 16px, $mobile: 14px) {
+    font-weight: 400;
+    font-size: $size;
+    color: $textColor;
+    font-family: $textFont;
+
+    @media screen and (max-width: 425px) {
+        font-size: $mobile;
+    }
+}

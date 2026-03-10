@@ -1,0 +1,4 @@
+@use "../../../global/index.scss" as *;
+.logo {
+    @extend %logo;
+}

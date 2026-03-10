@@ -1,0 +1,51 @@
+@use "../../../global/index.scss" as *;
+.header {
+    .container {
+        @include container();
+
+        .row {
+            @include flex-space(space-between, center);
+
+            .header__content {
+                max-width: 500px;
+                @include flex-column();
+
+                .title {
+                    @include title();
+                }
+
+                .desc {
+                    @include desc();
+                }
+
+                .btn {
+                    @include button(15px 30px)
+                }
+            }
+            .lottie {
+                max-width: 500px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 30px;
+        .container {
+            .row {
+                flex-direction: column-reverse;
+                gap: 0;
+                .header__content {
+                    align-items: center;
+                    text-align: center;
+                }
+                .lottie {
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+}

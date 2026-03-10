@@ -1,0 +1,11 @@
+@use "../../../global/index.scss" as *;
+footer {
+    padding: 20px 0;
+    .content {
+        @include flex-column(10px, center);
+
+        .copyright {
+            @include desc();
+        }
+    }
+}

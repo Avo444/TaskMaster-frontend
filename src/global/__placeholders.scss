@@ -1,0 +1,37 @@
+@use "./_variables" as *;
+// ================================== [ OTHER ] ===================================
+
+%logo {
+    @extend %flex-align-center;
+    font-family: $logoFont;
+    color: $textColor;
+    font-size: 24px;
+    img {
+        max-width: 40px;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 20px;
+        img {
+            max-width: 30px;
+        }
+    }
+}
+
+// ================================== [ FlexBox ] ===================================
+
+%flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex-align-center {
+    display: flex;
+    align-items: center;
+}
