@@ -1,12 +1,14 @@
 import { useState } from "react";
 import styles from "./index.module.scss";
 
-const FaqItem = ({ title, desc }) => {
-    const [active, setActive] = useState(false);
+const FaqItem = ({ data, active, setActive }) => {
+    const { id, title, desc } = data;
     return (
         <div
-            className={active ? `${styles.item} ${styles.active}` : styles.item}
-            onClick={() => setActive(!active)}
+            className={
+                active === id ? `${styles.item} ${styles.active}` : styles.item
+            }
+            onClick={() => setActive(active === id ? false : id)}
         >
             <div className={styles.heading}>
                 <p className={styles.title}>{title}</p>
