@@ -1,0 +1,18 @@
+@use "../../../global/index.scss" as *;
+.header {
+    @include flex-column(10px);
+    .title {
+        @include title(28px, 24px);
+    }
+    .desc {
+        @include desc();
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .header {
+        align-items: center;
+        text-align: center;
+    }
+}

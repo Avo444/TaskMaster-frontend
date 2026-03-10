@@ -1,20 +1,21 @@
 // ================================== [ COLOR'S ] ==================================
 $lightColor: #fff;
-$textColor: #5C5C64;
+$textColor: #5c5c64;
 $titleColor: #151934;
-$primaryColor: #8258D5;
-$lightBackground: #FAF9FE;
+$primaryColor: #8258d5;
+$cardBackground: #f8f8fc;
+$lightBackground: #faf9fe;
 
 // ================================== [ GRAIENT'S ] ==================================
 $backgroundGradient: linear-gradient(135deg, #d1b3ff, #7a4de9);
+
 // ================================== [ FONT'S ] ===================================
-$logoFont: "Poppins", sans-serif;
 $titleFont: "Inter", sans-serif;
+$logoFont: "Poppins", sans-serif;
 $textFont: "Manrope", sans-serif;
 
 // ================================== [ SIZE'S ] ===================================
 $contentWidth: 1280px;
-
 
 // ================================== [ OTHER'S ] ===================================
 $transition: all 0.3s;

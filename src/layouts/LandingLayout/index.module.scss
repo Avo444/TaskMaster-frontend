@@ -1,0 +1,12 @@
+@use "../../global/index.scss" as *;
+.layout {
+    padding: 40px 0;
+    
+    .container {
+        @include container();
+
+        .row {
+            @include flex-column(30px)
+        }
+    }
+}

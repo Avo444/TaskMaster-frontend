@@ -1,13 +1,5 @@
-@use "../../../global/index.scss" as *;
-.features {
-    padding: 60px 0;
-    padding-top: 0;
-    .container {
-        @include container();
-        .slider {
-            padding-top: 30px;
-            display: flex;
-            height: 320px;
-        }
-    }
+.slider {
+    padding-top: 30px;
+    display: flex;
+    height: 320px;
 }

@@ -1,0 +1,69 @@
+@use "../../../global/index.scss" as *;
+.item {
+    @include flex-column(0);
+    overflow: hidden;
+    width: 100%;
+
+    .heading {
+        @include flex-space(space-between, center);
+        gap: 5px;
+        width: 100%;
+        padding: 15px 30px;
+        border-radius: 15px;
+        background-color: $cardBackground;
+        transition: all 0.3s ease-in-out;
+
+        .title {
+            @include title(16px, 15px);
+        }
+
+        .btn {
+            position: relative;
+            width: 20px;
+            span {
+                width: 100%;
+                height: 3px;
+                position: absolute;
+                display: inline-block;
+                background-color: $primaryColor;
+                transition: transform 0.3s ease-in-out;
+
+                &:nth-child(1) {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+    .content {
+        @include desc();
+        opacity: 0;
+        width: 100%;
+        max-height: 0;
+        padding: 0 30px;
+        visibility: hidden;
+        border-radius: 0 0 15px 15px;
+        border: 1px solid $cardBackground;
+        transition:
+            max-height 0.8s ease-in-out,
+            opacity 0.3s ease,
+            padding 0.4s ease;
+    }
+    &.active {
+        .heading {
+            border-radius: 15px 15px 0 0;
+            .btn {
+                span {
+                    &:nth-child(1) {
+                        transform: rotate(0);
+                    }
+                }
+            }
+        }
+        .content {
+            opacity: 1;
+            padding: 15px 30px;
+            visibility: visible;
+            max-height: max-content;
+        }
+    }
+}

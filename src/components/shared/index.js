@@ -1,5 +1,8 @@
 import Logo from "./Logo";
+import Heading from "./Heading";
+import FaqItem from "./FaqItem";
 import TopScroll from "./TopScroll";
 import PricingItem from "./PricingItem";
 import FeaturesItem from "./FeaturesItem";
-export { Logo, TopScroll, FeaturesItem, PricingItem };
+import TestimonalsItem from "./TestimonalsItem";
+export { Logo, TopScroll, FeaturesItem, PricingItem, TestimonalsItem, FaqItem, Heading };

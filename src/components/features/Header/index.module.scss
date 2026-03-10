@@ -8,7 +8,7 @@
 
             .header__content {
                 max-width: 500px;
-                @include flex-column();
+                @include flex-column(10px);
 
                 .title {
                     @include title();
@@ -19,7 +19,8 @@
                 }
 
                 .btn {
-                    @include button(15px 30px)
+                    @include button(15px 30px);
+                    margin-top: 15px;
                 }
             }
             .lottie {
@@ -29,7 +30,6 @@
         }
     }
 }
-
 
 @media screen and (max-width: 1024px) {
     .header {

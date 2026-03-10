@@ -1,6 +1,7 @@
 @use "../../../global/index.scss" as *;
 .item {
     @include flex-column(25px);
+    width: 100%;
     min-height: 500px;
     padding: 30px 20px;
     border-radius: 30px;

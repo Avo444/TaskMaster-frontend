@@ -1,5 +1,7 @@
 @use "../../../global/index.scss" as *;
 footer {
+    border: 2px solid $cardBackground;
+    margin-top: 40px;
     padding: 20px 0;
     .content {
         @include flex-column(10px, center);

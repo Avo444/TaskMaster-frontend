@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 import { Logo } from "../../shared";
 import { ROUTES } from "../../../routes";
-import { IoMdClose } from "react-icons/io";
 import { NavLink } from "react-router-dom";
+import { IoMdClose } from "react-icons/io";
 import { CiMenuFries } from "react-icons/ci";
 
 import styles from "./index.module.scss";
@@ -34,28 +34,59 @@ const Navbar = () => {
                         <div className={styles.menu}>
                             <IoMdClose size={32} className={styles.close} />
                             <Link
-                                to={"Home"}
                                 onClick={() => setMenu(false)}
-                                smooth={true}
+                                activeClass={styles.active}
+                                spy={true}
+                                offset={-95}
                                 duration={500}
+                                smooth={true}
+                                to={"Home"}
                             >
                                 Home
                             </Link>
                             <Link
-                                to={"Pricing"}
                                 onClick={() => setMenu(false)}
+                                activeClass={styles.active}
+                                spy={true}
+                                offset={-70}
+                                to={"Pricing"}
                                 smooth={true}
                                 duration={500}
                             >
                                 Pricing
                             </Link>
                             <Link
-                                to={"Features"}
                                 onClick={() => setMenu(false)}
+                                activeClass={styles.active}
+                                spy={true}
+                                offset={-70}
+                                to={"Features"}
                                 smooth={true}
                                 duration={500}
                             >
                                 Features
+                            </Link>
+                            <Link
+                                onClick={() => setMenu(false)}
+                                activeClass={styles.active}
+                                spy={true}
+                                offset={-70}
+                                to={"Testimonals"}
+                                smooth={true}
+                                duration={500}
+                            >
+                                Testimonals
+                            </Link>
+                            <Link
+                                onClick={() => setMenu(false)}
+                                activeClass={styles.active}
+                                spy={true}
+                                offset={-70}
+                                to={"Faq"}
+                                smooth={true}
+                                duration={500}
+                            >
+                                Faq
                             </Link>
                             <NavLink to={ROUTES.LOGIN} className={styles.btn}>
                                 Sign in

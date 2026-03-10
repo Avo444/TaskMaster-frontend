@@ -37,6 +37,12 @@ z-index: 99;
                             @include button()
                         }
 
+                        &.active {
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+
                         &:not(.btn):hover {
                             &::before {
                                 width: 100%;

@@ -1,0 +1,20 @@
+@use "../../../global/index.scss" as *;
+.content {
+    @include flex-column(50px);
+
+    .list {
+        @include flex-column(15px);
+    }
+    .bottom {
+        @include flex-center(25px);
+        flex-direction: column;
+        width: 100%;
+
+        .title {
+            @include title(20px, 18px)
+        }
+        .btn {
+            @include button(15px 35px, 16px, 10px)
+        }
+    }
+}
