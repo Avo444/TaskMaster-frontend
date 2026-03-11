@@ -20,8 +20,8 @@ const Home = () => {
     return (
         <>
             <Header />
-            <Pricing />
             <Features />
+            <Pricing />
             <Testimonals />
             <Faq />
         </>

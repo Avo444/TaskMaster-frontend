@@ -1,0 +1,35 @@
+@use "../../../global/index.scss" as *;
+.item {
+    padding: 14px;
+    font-size: 16px;
+    font-family: $textFont;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $primaryColor;
+        transition: $transition;
+    }
+    &.btn {
+        @include button();
+        
+    }
+
+    &.active {
+        &::before {
+            width: 100%;
+        }
+    }
+
+    &:not(.btn):hover {
+        &::before {
+            width: 100%;
+        }
+    }
+}
