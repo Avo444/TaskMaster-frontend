@@ -6,6 +6,7 @@
     font-weight: 500;
     position: relative;
     cursor: pointer;
+    color: $titleColor;
     &::before {
         content: "";
         position: absolute;
