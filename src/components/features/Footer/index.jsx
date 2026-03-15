@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
         <div className={styles.content}>
             <Logo />
-            <p className={styles.copyright}>© 2024 TaskMaster. All rights reserved.</p>
+            <p className={styles.copyright}>© 2026 TaskMaster. All rights reserved.</p>
         </div>
     </footer>
   )

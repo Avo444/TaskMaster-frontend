@@ -1,0 +1,27 @@
+@use "../../../global/index.scss" as *;
+.formContainer {
+    @include flex-column(15px, center);
+    box-shadow: 0 0 20px rgba($color: $textColor, $alpha: 0.2);
+    width: 100%;
+    padding: 20px;
+    max-width: 350px;
+    border-radius: 20px;
+
+    .title {
+        @include title(24px, 20px);
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $cardBackground;
+    }
+
+    .form {
+        @include flex-column(10px, center);
+        width: 100%;
+        .btn {
+            @include button(10px 30px);
+            border: none;
+            margin-top: 10px;
+        }
+    }
+}

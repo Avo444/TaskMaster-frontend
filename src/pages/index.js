@@ -1,3 +1,5 @@
 import Home from "./Home";
 import Error from "./Error";
-export { Home, Error };
+import Auth from "./Auth";
+
+export { Home, Error, Auth };
