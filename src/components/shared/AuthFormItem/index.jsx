@@ -5,10 +5,10 @@ import styles from "./index.module.scss";
 const AuthFormItem = ({ name, type, placeholder, Icon }) => {
     return (
         <div className={styles.item}>
-            <div className={styles.item__content}>
+            <label className={styles.item__content}>
                 {Icon && <Icon className={styles.icon} />}
                 <Field name={name} type={type} placeholder={placeholder} />
-            </div>
+            </label>
             <ErrorMessage name={name} component={"p"} className={styles.error} />
         </div>
     );

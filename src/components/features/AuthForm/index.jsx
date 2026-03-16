@@ -1,8 +1,10 @@
 import { Form, Formik } from "formik";
-import { authValidation } from "../../../helper";
-import { AuthFormItem } from "../../shared";
+import { Link } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { ROUTES } from "../../../routes";
+import { AuthFormItem } from "../../shared";
+import { authValidation } from "../../../helper";
 import { MdOutlinePassword } from "react-icons/md";
 import { IoShieldCheckmark } from "react-icons/io5";
 
@@ -64,6 +66,12 @@ const AuthForm = ({ isLogin, name }) => {
                     </button>
                 </Form>
             </Formik>
+            <div className={styles.bottom}>
+                <p className={styles.text}>
+                    Do you {isLogin ? `not` : ``} have an account?
+                </p>
+                <Link to={isLogin ? ROUTES.REGISTER : ROUTES.LOGIN} className={styles.link}>Sign {isLogin ? `Up` : `In`}</Link>
+            </div>
         </div>
     );
 };
